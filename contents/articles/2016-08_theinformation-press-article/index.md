@@ -6,30 +6,25 @@
  featured_img: "../../../../media/images/blog/theinformation_2016.png"
  ---
 
-Pupil is featured in The Information press article – "Eye-Tracking Companies Set Sights on VR", The Information , August 2016.
+Pupil is featured in The Information article "Eye-Tracking Companies Set Sights on VR", August, 2016. (Note - full article is behind a paywall).
 
+The article highlights VR as an inevitable and promising consumer application area for eye tracking and provides an overview of the technological impact and players in the field. In part due to expensive cost of purchusing eye tracking hardware and software but also that it hasn't found a place in the consumer market yet. And now where more efficient fabrication and prototyping tools with smaller and cheaper components is pushing eye tracking to become more of a mainstream technology.
+
+<!--- 
+placeholder for screenshot of part of the article
+-->
 <img src="../../../../media/images/blog/theinformation_2016.png" class='Feature-image' alt="Theinformation Press Article">
 
-The article provides an insight on how eye tracking was mostly associated with university research labs which makes it a very niche market. In part due to expensive cost of purchusing eye tracking hardware and software but also that it hasn't found a place in the consumer market yet. And now where more efficient fabrication and prototyping tools with smaller and cheaper components is pushing eye tracking to become more of a mainstream technology.
-
-Here is an excerpt from the arcticle:
-<blockquote cite="http://">
-"...With no funding whatsoever,
-they began disassembling off-the-shelf webcams and
-making prototype eye trackers with 3-D printers. Now,
-with parts from Chinese suppliers, Pupil Labs assembles
-its products out of a small office in Berlin and sells them
-to university researchers, along with its open source
-software, for a few thousand dollars..." (p 3)
-</blockquote>
-
-With virtual and augmented reality becoming a mainstream technology with consumer products in the market. This allows for more development for eye tracking applications in virtual reality (VR) and augmented reality (AR) head mounted displays (HMDs).
-
 Pupil's commitment is making accessible and open eye tracking tools.
+
 <blockquote cite="http://">
 ...While other tools/frameworks may already exist for eye tracking in HMDs, the majority of the code remains closed – a blackbox – inhibiting those who want to learn more or make their own tools. This is why we propose a community driven, open source suite of software  **building blocks for eye tracking HMDs.**
 </blockquote>
 
+We would be excited to see consumer-ware VR/AR/MR devices with built-in eye tracking technology. But, what the article fails to address are critical issues of accessibility, transparency, and privacy.
 
-Read the full article on the [The Information website](http://).
-Check out our blog post on [HMD eyes](http://)
+Will researchers and developers be able to access and introspect into fundamental algorithms or will it be a proprietary black box? Will researchers and developers be allowed to modify and extend the consumer-ware platforms at the lowest levels or will they be restricted by the limits of a SDK? Will the consumer-ware hardware be suitable for the diverse fields of research and development? If eye movement data is captured and saved by consumer-ware distributors – will such data be secure and/or will this potential data cache be accessible to researchers?
+
+While all of these questions are open speculation until we see something concrete from the consumer-ware VR/AR/MR.
+
+We at Pupil Labs would like to reinforce our commitment to building accessible and open tools for eye tracking. We write about our goals in [this blog post](https://github.com/nathakits/pupil-labs-website/commit/link%20to%20hmd%20eyes%20blog%20post)
