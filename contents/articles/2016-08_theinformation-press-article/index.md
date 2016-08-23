@@ -27,4 +27,4 @@ Will researchers and developers be able to access and introspect into fundamenta
 
 While all of these questions are open speculation until we see something concrete from the consumer-ware VR/AR/MR.
 
-We at Pupil Labs would like to reinforce our commitment to building accessible and open tools for eye tracking. We write about our goals in [this blog post](https://github.com/nathakits/pupil-labs-website/commit/link%20to%20hmd%20eyes%20blog%20post)
+We at Pupil Labs would like to reinforce our commitment to building accessible and open tools for eye tracking. We write about our goals in [this blog post](https://pupil-labs.com/blog/2016-04/eye-tracking-head-mounted-displays/)
