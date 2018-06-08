@@ -166,15 +166,15 @@ class PupilStore
     @clearCartButton.click (event)=>
       event.preventDefault()
       LocalStorage.clear()
-      # $(".Cart-container").hide 800, ->
-        # $("#Cart-empty").fadeIn(1000)
+      $(".Cart-container").hide 250, ->
+        $("#Cart-empty").fadeIn(300)
       @eventUpdateCartNavCounter()
 
   eventLoadCart: ->
     if $("#Cart").length > 0
       qty = [v.qty for k,v of LocalStorage.dict()]
-      # if qty[0].length <= 0
-      #   $("#Cart-empty").fadeIn(1000)
+      if qty[0].length <= 0
+        $("#Cart-empty").fadeIn(300)
 
 
   eventUpdateCartNavCounter: ->
@@ -224,8 +224,8 @@ class PupilStore
     if $(@cartPage).length > 0
       if LocalStorage.length() > 0
         # remove empty cart text
-        # $("#Cart-empty").hide()
-        # $(".Cart-container").show()
+        $("#Cart-empty").hide()
+        $(".Cart-container").show()
         db = get_product_database()
 
         for k,v of LocalStorage.dict()
@@ -318,8 +318,8 @@ class PupilStore
         $("h3[id='CartSum--label']").text("#{ label }")
         $("h3[id='CartSum--total']").text("#{ totalPrice }")
         $("div[id='CartSum-label--container']").append("<p class='Cart-disclaimerTxt'>(ships worldwide using DHL or UPS express, additional VAT may apply)</p>")
-      # else
-        # $(".Cart-container").hide()
+      else
+        $(".Cart-container").hide()
 
   eventRemoveCartItem: ->
     if $(@cartPage).length > 0
@@ -331,7 +331,7 @@ class PupilStore
         LocalStorage.expire($(row).attr('id'))
         
         # remove the row
-        $(container).slideUp 400, ->
+        $(container).slideUp 250, ->
           $(container).remove()
 
         # update total
@@ -343,10 +343,10 @@ class PupilStore
 
         # update header
         @eventUpdateCartNavCounter()
-        # if LocalStorage.length() < 1
+        if LocalStorage.length() < 1
           # remove empty cart text
-          # $(".Cart-container").hide 600, ->
-            # $("#Cart-empty").fadeIn(1000)
+          $(".Cart-container").fadeOut 250, ->
+            $("#Cart-empty").fadeIn(300)
 
   eventUpdateCartQuantity: ->
     if $(@cartPage).length > 0
@@ -465,12 +465,12 @@ class PupilStore
 
         if $(button).hasClass('checkmark--active')
           $(button).toggleClass('checkmark--active')
-          $(".Form-shipping-container").fadeOut()
+          $(".Form-shipping-container").fadeOut(250)
         else
           $(button).toggleClass('checkmark--active')
           $("input[id='postalCode_s']")
           .attr("data-parsley-postalcodevalidator","#{$("input[id='postalCode_b']").data('parsley-postalcodevalidator')}")
-          $(".Form-shipping-container").fadeIn()
+          $(".Form-shipping-container").fadeIn(250)
 
   eventToggleQuoteType: ->
     $("#q-checkbox").click (event)=>
@@ -559,21 +559,21 @@ class PupilStore
 
           console.log(formData_formatted_JSON)
 
-          # xhr = new XMLHttpRequest()
+          xhr = new XMLHttpRequest()
 
-          # xhr.addEventListener "readystatechange", ->
+          xhr.addEventListener "readystatechange", ->
 
-          #   if @readyState is 4
-          #     if @status is 200
-          #       window.location.replace "#{window.location.origin}/order_success"
-          #     else
-          #       console.warn "Request Error: #{@statusText}"
+            if @readyState is 4
+              if @status is 200
+                window.location.replace "#{window.location.origin}/order_success"
+              else
+                console.warn "Request Error: #{@statusText}"
 
-          # xhr.open "POST", url
-          # xhr.setRequestHeader "content-type", "application/json"
-          # xhr.setRequestHeader "cache-control", "no-cache"
+          xhr.open "POST", url
+          xhr.setRequestHeader "content-type", "application/json"
+          xhr.setRequestHeader "cache-control", "no-cache"
 
-          # xhr.send formData_formatted_JSON
+          xhr.send formData_formatted_JSON
 
 
   countryValidator: ->
